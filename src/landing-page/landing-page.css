@@ -1,0 +1,48 @@
+
+.rightDiv{
+
+    width: 100%;
+    min-height: 100%;
+    background-color: black;
+}
+
+.leftDiv{
+
+    float: left;
+    width: 100%;
+    min-height: 100%;
+    position:absolute;
+    background-color: #FFB23D;
+}
+
+.row{
+
+    height: 100vh;
+}
+
+.img{
+
+    text-align: center;
+    margin-top: 40%;
+    height: 15vmin;
+}
+
+.img2{
+
+    margin-top: 45%;
+}
+
+.label {
+
+    color: black;
+    font-family: "calibri", Garamond, 'Comic Sans MS';
+    font-weight: bold;
+    font-size: 20px;
+    margin-top:13%;
+}
+
+.label2{
+
+    color: #FFFF6B;
+    margin-top: 10%;
+}
