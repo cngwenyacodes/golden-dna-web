@@ -78,9 +78,10 @@ class GoldenDNALandingPage extends Component{
                     </row>
                 </div>
 
-                <div className="headingsDiv animated slideInUp" id = "About">
 
-                    <h2 className="heading text-uppercase animated slideInUp" style={{fontSize:25, marginTop:5, fontWeight:'bold', color:'#fed136'}}> <u> Our golden story </u></h2>
+                <div className={"headingsDiv "+this.state.isActive[0]?"animated slideInUp":""} id = "About">
+
+                    <h2 className="heading text-uppercase" style={{fontSize:25, marginTop:5, fontWeight:'bold', color:'#fed136'}}> <u> Our golden story </u></h2>
 
                     <p className="ourGoldenStory"> Lorem ipsum dolor sit amet, amet arcu, odio quis, sollicitudin tincidunt dolor sodales sociis sed. Libero sodales dignissim. 
                         Nisl justo turpis ligula ultrices ultrices etiam. Tempus nonummy amet diam dui in nunc, pretium morbi laoreet, 
