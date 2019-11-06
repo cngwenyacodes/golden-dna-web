@@ -4,9 +4,12 @@ import golden_dna_img from '../img/CroppedLogo2.png'
 import backgoundhandsimg from '../img/hands2.jpeg';
 import backgoundhandsimg1 from '../img/GoldenDnaBackGround.JPG'
 import { MDBIcon } from 'mdbreact';
+import ContactUs  from '../footer/footer'
+import SubDivisions from './Sub-Divisions'
+
 
 class GoldenDNALandingPage extends Component{
-
+    
     constructor(props) {
 
         super(props);
@@ -57,6 +60,7 @@ class GoldenDNALandingPage extends Component{
         return(
 
             //NAVIGATION-BAR
+            <div>
             <div  id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50">
                 
                 <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav"  >
@@ -81,7 +85,7 @@ class GoldenDNALandingPage extends Component{
 
                 <div className={"headingsDiv "+this.state.isActive[0]?"animated slideInUp":""} id = "About">
 
-                    <h2 className="heading text-uppercase" style={{fontSize:25, marginTop:5, fontWeight:'bold', color:'#fed136'}}> <u> Our golden story </u></h2>
+                    <h2 className="heading text-uppercase" style={{fontSize:25, marginTop:'2%', fontWeight:'bold', color:'#fed136'}}> <u> Our golden story </u></h2>
 
                     <p className="ourGoldenStory"> Lorem ipsum dolor sit amet, amet arcu, odio quis, sollicitudin tincidunt dolor sodales sociis sed. Libero sodales dignissim. 
                         Nisl justo turpis ligula ultrices ultrices etiam. Tempus nonummy amet diam dui in nunc, pretium morbi laoreet, 
@@ -139,7 +143,19 @@ class GoldenDNALandingPage extends Component{
                         </div>
 
                 </div>
+
+       
 </div>
+
+<SubDivisions/>
+
+<div id="Contact Us">
+
+<ContactUs/>
+</div>
+</div>
+
+
 
 
         );

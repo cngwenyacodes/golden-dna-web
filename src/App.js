@@ -4,6 +4,7 @@ import './App.css';
 import Landingpage from './landing-page/landing-page'
 import GoldenDNALandingPage from './GoldenDnaPages/GoldenDNALandingPage'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import footer from './footer/footer';
 
 function App() {
   return (
