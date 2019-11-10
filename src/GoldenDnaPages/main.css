@@ -73,7 +73,7 @@ h6 {
 
  #bgImg{
 
-  background-image: url("../img/PHOTO-2019-09-12-13-29-14.jpg");
+  background-image: url("../img/GoldenDnaBackGround.JPG");
   height: 99vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -150,15 +150,15 @@ h6 {
     }
   } */
 
-.page-section{
+#Sub-Divisions{
 
-    padding: 100px 0;
-    overflow: hidden;
+  /**background-color: #212529;**/
 }
 
 #Sub-Divisions .Sub-Divisions-item {
   right: 0;
-  margin: 0 0 15px;
+  /**margin: 0 0 0px;**/
+
 }
 
 #Sub-Divisions .Sub-Divisions-item .Sub-Divisions-link {
@@ -176,7 +176,6 @@ h6 {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  background: rgba(254, 209, 54, 0.9);
 }
 
 #Sub-Divisions .Sub-Divisions-item .Sub-Divisions-link .Sub-Divisions-hover:hover {
@@ -206,7 +205,6 @@ h6 {
 #Sub-Divisions .Sub-Divisions-item .Sub-Divisions-caption {
   max-width: 400px;
   margin: 0 auto;
-  padding: 25px;
   text-align: center;
   background-color: #fff;
 }
@@ -229,7 +227,7 @@ h6 {
 
 @media (min-width: 767px) {
   #Sub-Divisions .Sub-Divisions-item {
-    margin: 0 0 30px;
+    /**margin: 0 0 0;**/
   }
 }
 
@@ -284,4 +282,26 @@ h6 {
 
 .Sub-Divisions-modal .close-modal:hover {
   opacity: 0.3;
+}
+
+.Sub-Division-Left{
+
+  margin-left: 15%;
+}
+
+.contactusLink{
+
+  margin-bottom: -1000px;
+  color: #fec503;
+  margin-top: 1%;
+  font-size: 80%;
+  font-weight: 200;
+  padding: 0.75em 0;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.contactusLink:hover{
+
+  cursor: pointer;
 }

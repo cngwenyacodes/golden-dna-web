@@ -37,8 +37,32 @@ class ContactUs extends Component{
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
-              <div class="clearfix" ></div>
-              <div class="col-lg-12 text-center" style ={{marginTop:'-25%'}}>
+
+              <div class="col-lg-12 text-center"  style ={{marginTop:'-18%'}}>
+                <ul class="list-inline social-buttons" >
+                  <li class="list-inline-item" >
+                    <a href="https://twitter.com/GOLDENDNA_" target="_blank">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://m.facebook.com/Goldenn3000/" target="_blank">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://instagram.com/goldendna_?igshid=1dnycz9vncxgp" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://instagram.com/goldendna_?igshid=1dnycz9vncxgp" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-12 text-center" style ={{marginTop:'-30%'}}>
                 <div id="success"></div>
                 <button id="sendMessageButton" class="btn  btn-xl text-uppercase" type="submit" style = {{backgroundColor:'#fed136'}}>Send Message</button>
               </div>
