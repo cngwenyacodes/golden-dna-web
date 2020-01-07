@@ -3,10 +3,17 @@ import './footer.css'
 
 class ContactUs extends Component{
 
+  constructor(props) {
+
+    super(props);
+    console.log(this.props.isActiveContact);
+}
+
     render(){ 
         return (
-<section className="page-section" id="contact"  >
-    <div class="container">
+          <div>
+<section className={"page-section "} id="contact"  >
+    <div class={"container " + (this.props.isActiveContact ? "animated slideInUp"  :"")}>
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Contact Us</h2>
@@ -62,7 +69,7 @@ class ContactUs extends Component{
                   </li>
                 </ul>
               </div>
-              <div class="col-lg-12 text-center" style ={{marginTop:'-30%'}}>
+              <div class="col-lg-12 text-center" style ={{marginTop:'-32%'}}>
                 <div id="success"></div>
                 <button id="sendMessageButton" class="btn  btn-xl text-uppercase" type="submit" style = {{backgroundColor:'#fed136'}}>Send Message</button>
               </div>
@@ -72,6 +79,13 @@ class ContactUs extends Component{
       </div>
     </div>
   </section>
+
+  <section class="copyright py-4 text-center text-white">
+<div class="container">
+  <small>Copyright &copy; Golden DNA 2019</small>
+</div>
+</section>
+  </div>
     )
 }
    

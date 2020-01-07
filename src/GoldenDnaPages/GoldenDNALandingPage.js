@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './main.css'
 import golden_dna_img from '../img/CroppedLogo2.png'
 import backgoundhandsimg from '../img/hands2.jpeg';
-import backgoundhandsimg1 from '../img/GoldenDnaBackGround.JPG'
+import backgoundhandsimg1 from '../img/final-background-image.png'
 import { MDBIcon } from 'mdbreact';
 import ContactUs  from '../footer/footer'
 import SubDivisions from './Sub-Divisions'
@@ -10,12 +10,14 @@ import SubDivisions from './Sub-Divisions'
 
 class GoldenDNALandingPage extends Component{
     
-    constructor(props) {
+    constructor() {
 
-        super(props);
+        super();
         this.state = {links: ["About", "Services", "Sub-Divisions", "Contact Us"],
                       isActive:[false, false, false, false],  
                     linksLength:4}
+
+        this.isActive = this.isActive.bind(this);
     }
 
     createNavPanel(){
@@ -46,6 +48,11 @@ class GoldenDNALandingPage extends Component{
         this.setState(this.state);
     }
 
+    isActive(index){
+
+        return this.state.isActive[index];
+    }
+
     resetLinks(){
 
         for(const [r,value] of this.state.isActive.entries()){
@@ -67,39 +74,43 @@ class GoldenDNALandingPage extends Component{
                     <div className="container ">
                     <a className="navbar-brand js-scroll-trigger" href="#page-top" onClick={() => this.resetLinks()}><img className="Logo" src ={golden_dna_img}/></a>
 
-                    <div className="collapse navbar-collapse" id="navbarResponsive">
+                    <div className="collapse navbar-collapse" id="navbarResponsive" style = {{marginRight : "10%"}}>
                         <ul className="navbar-nav text-uppercase ml-auto">
                             {this.createNavPanel()}
                         </ul>
                     </div>
                     </div>
                 </nav>
-
-                <div className="animated slideInLeft" id="bgImg">
+                
+                <div className = "backGround">
+                <div className="animated slideInLeft" id="background-img">
                     <row className="topPageSlidingPane">
                         {/* <img src={backgoundhandsimg} className="img-fluid background-img" alt="" /> */}
-                        {/* <img src={backgoundhandsimg1} className="img-fluid background-img" alt="" /> */}
+                        {<img src={backgoundhandsimg1} className="img-fluid background-img" alt="" /> }
                     </row>
+                </div>
                 </div>
 
 
-                <div className={"headingsDiv "+this.state.isActive[0]?"animated slideInUp":""} id = "About">
+                <div className={"headingsDiv " } id = "About">
 
                     <h2 className="heading text-uppercase" style={{fontSize:25, marginTop:'2%', fontWeight:'bold', color:'#fed136'}}> <u> Our golden story </u></h2>
 
-                    <p className="ourGoldenStory"> 
+                    <p className={"ourGoldenStory "+ ((this.state.isActive[0]) ? "animated slideInUp" : "")}> 
                         Golden DNA is an indepedent creative house that positions itself as the hub of creative genius. The company focuses
                         on solving business problems through creative and critical thinking. It was founded by two creatives, Zazi Ntozini
                         and Caleb Kalonji whou sought out to create an in-house agency that can evolve to be the best at what it does.
                     </p>
+
+                    <div className = "line1"></div>
                 </div>
 
-                <div className="headingsDiv animated slideInUp" id = "Services">
+                <div className={"headingsDiv "} id = "Services">
 
-                    <h2 className="heading text-uppercase animated slideInUp" style={{fontSize:25, marginTop:5, fontWeight:'bold', color:'#fed136'}}> <u> SERVICES </u></h2>
+                    <h2 className="heading text-uppercase animated slideInUp" style={{fontSize:25, marginTop:25, fontWeight:'bold', color:'#fed136'}}> <u> SERVICES </u></h2>
                 </div>
 
-                <div className="row" style={{height:"50%"}}>
+                <div className={"row " + ((this.state.isActive[1]) ? "animated slideInUp" : "")} style={{height:"50%"}}>
 
                     <div className="col-sm-4"  style={{marginTop:5, marginLeft:"16%"}}>
                         <MDBIcon icon="users" size="3x" className="amber-text pr-3" />
@@ -113,6 +124,8 @@ class GoldenDNALandingPage extends Component{
                             that is social media via: social media strategy development, consulting, advertising, community engagement 
                             and management. 
                         </p>
+
+                        <div className = "lineLeft1"> </div>
                     </div>
 
                     <div className="col-sm-4"  style={{marginTop:5,}}>
@@ -124,12 +137,14 @@ class GoldenDNALandingPage extends Component{
                             graphic design, and multi-language content and video production. Let us assist you to strategically plan, 
                             produce, and actively promote content that speaks both to your market and your bottom line. Enquire Now
                         </p>
+
+                        <div className = "lineRight1"> </div>
                     </div>
 
 
                 </div>
 
-                <div className="row" style={{height:"50%", marginTop:20}}>
+                <div className={"row " + ((this.state.isActive[1]) ? "animated slideInUp" : "")} style={{height:"50%", marginTop:20}}>
 
                         <div className="col-sm-4"  style={{marginLeft:"16%",}}>
                             <MDBIcon icon="laptop" size="3x" className="amber-text pr-3" />
@@ -140,6 +155,8 @@ class GoldenDNALandingPage extends Component{
                                 Tailor-made strategies around your specific objectives, budget and vision, our winning team of digital prodigies 
                                 are here to take your digital campaigns quite simply into the ether. Enquire Now
                             </p>
+
+                            <div className = "lineLeft1"> </div>
                         </div>
 
                         <div className="col-sm-4"  style={{marginTop:5,}}>
@@ -151,6 +168,8 @@ class GoldenDNALandingPage extends Component{
                             a fraction of the cost we. We are here to serve you. From a simple editing job, to a corporate video to an all-out production 
                             we have what it takes. 
                             </p>
+
+                            <div className = "lineRight2"> </div>
                         </div>
 
                 </div>
@@ -158,16 +177,16 @@ class GoldenDNALandingPage extends Component{
        
 </div>
 
-<div className={"headingsDiv "+this.state.isActive[0]?"animated slideInUp":""} id = "Sub-Divisions">
+<div className="headingsDiv" id = "Sub-Divisions">
 
-<h2 className="heading text-uppercase" style={{fontSize:25, marginTop:'2%', fontWeight:'bold', color:'#fed136'}}> <u> Sub-Divisons </u></h2>
-<SubDivisions/>
+<h2 className={"heading text-uppercase " + ((this.state.isActive[2]) ? "animated slideInUp":"")} style={{fontSize:25, marginTop:'2%', fontWeight:'bold', color:'#fed136'}}> <u> Sub-Divisons </u></h2>
+<SubDivisions isActive = {this.state.isActive[2]}/>
 
 </div>
 
 <div id="Contact Us">
 
-<ContactUs/>
+<ContactUs isActiveContact = {this.state.isActive[3]}/>
 </div>
 </div>
 

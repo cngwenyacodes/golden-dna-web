@@ -10,15 +10,20 @@ import imgPhotography from '../img/Sub-Divisions/photography.jpeg';
 import imgPhotographyDetails from '../img/Sub-Divisions/photography-details.png';
 import imgVideography from '../img/Sub-Divisions/videography.jpeg';
 import imgVideographyDetails from '../img/Sub-Divisions/videography-details.png';
+import imgGraphicDesign from '../img/Sub-Divisions/graphic-design.jpeg';
+import imgGraphicDesignDetails from '../img/Sub-Divisions/graphic-design-details.jpeg'
+import GoldenDNALandingPage from './GoldenDNALandingPage';
 class SubDivisions extends Component{
 
     constructor(props) {
 
         super(props);
-        this.state = {backgrounds: [imgAudioVisuals, imgClothingDesign,imgDigitalMedia, imgPhotography, imgVideography],
-                      backgroundsDetails:[imgAudioVisualsDetails, imgClothingDesignDetails, imgDigitalMediaDetails, imgPhotographyDetails, imgVideographyDetails],
-                      hovered:[false,false,false,false,false],  
-                      linksLength:5}
+        this.state = {backgrounds: [imgDigitalMedia,imgAudioVisuals, imgClothingDesign, imgPhotography, imgVideography, imgGraphicDesign],
+                      backgroundsDetails:[imgDigitalMediaDetails, imgAudioVisualsDetails, imgClothingDesignDetails, imgPhotographyDetails, imgVideographyDetails,imgGraphicDesignDetails],
+                      hovered:[false,false,false,false,false,false],  
+                      linksLength:6}
+
+                      console.log(this.props.isActive);
     }
 
     createSubDivisions(){
@@ -28,7 +33,7 @@ class SubDivisions extends Component{
         for(const [index,value] of this.state.backgrounds.entries()){
     
             subDivisionList.push(                        
-                <div class={"col-md-4 col-sm-6 Sub-Divisions-item" + ((index == 3) ? " Sub-Division-Left" : "")}>
+                <div class={"col-md-4 col-sm-6 Sub-Divisions-item"}>
                     <a class="Sub-Divisions-link" data-toggle="modal" href="#portfolioModal1">
                         <div class="Sub-Divisions-hover">
                             <img class="img-fluid" src={this.state.backgroundsDetails[index]} alt=""/>
@@ -69,7 +74,7 @@ class SubDivisions extends Component{
 
         return(
 
-            <div id="Sub-Divisions" style = {{marginTop : "3%"}}>
+            <div class={"Sub-Divisions "+ ((this.props.isActive) ? "animated slideInUp":"")} style = {{marginTop : "3%"}}>
                 <div class="container">
                 <div class="row">
                 {this.createSubDivisions()}

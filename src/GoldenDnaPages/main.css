@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700');
 
+.page-top{
+  color: black;
+  position: relative; 
+}
+
 #mainNav {
     background-color:black;
     position: fixed;
@@ -58,6 +63,7 @@
     border-radius: 50%;
     height: 20%;
     width:15%;
+    margin-left: -80%;
   }
 
 /* Back Ground possible sliding pane*/
@@ -71,29 +77,23 @@ h6 {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
- #bgImg{
+ .backGround{
+   background-color:#fed136;
+   height:1000px;
 
-  background-image: url("../img/GoldenDnaBackGround.JPG");
-  height: 99vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
  }
   .background-img{
-    
-    /* margin-top:0%;  */
-    margin-top:0%;
-    margin-bottom: -1%;
-    height: 140%;
-    width: 100%;
-    opacity: 0.8;
-    background-size: cover;
+    margin-top:15%;
+    margin-bottom: 0%;
+    height: 50%;
+    width: 50%;
+    align-content: center;
+   opacity: 0.7;
   }
 
   .headingsDiv{
-
     margin-top: 3%;
+    padding-top:50px;
   }
 
   .heading{
@@ -109,6 +109,7 @@ h6 {
     margin-right: 15%;
     color: black;
     text-align: center;
+    
   }
 
   .headingAfterLogo{
@@ -304,4 +305,34 @@ h6 {
 .contactusLink:hover{
 
   cursor: pointer;
+}
+
+.line1{
+  border-bottom: 1px solid black;
+  margin-top : 5%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.lineLeft1{
+
+  border-bottom: 1px solid black;
+  margin-top : 5%;
+  margin-bottom: 5%;
+}
+
+.lineRight1{
+
+  border-bottom: 1px solid black;
+  margin-top : 5%;
+  margin-bottom: 5%;
+  margin-top: 14.4%;
+}
+
+.lineRight2{
+
+  border-bottom: 1px solid black;
+  margin-top : 5%;
+  margin-bottom: 5%;
+  margin-top: 4.1%;
 }
