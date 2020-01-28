@@ -19,7 +19,7 @@ class Landingpage extends Component{
             
             <div className="col-sm">
                 <div className="rightDiv zoom">
-                    <img src={studios_logo_img} className="img img2" alt="logo" />
+                    <img src={studios_logo_img} className="img img2" alt="logo" onClick ={() => this.gotToOverHeadStudiosPage()}/>
                     <h3 className="label label2 "> OUR MEDIA HOUSE </h3>
                 </div>
             </div>
@@ -32,11 +32,19 @@ class Landingpage extends Component{
 
 gotToGoldenPage(){
 
-    console.log("HELLO");
+    console.log("/golden-dna-home");
     return (
        this.props.history.push('/golden-dna-home')
     );
 
+}
+
+gotToOverHeadStudiosPage(){
+
+    console.log("/overhead-studios");
+    return (
+       this.props.history.push('/overhead-studios')
+    );
 }
 
 }

@@ -131,7 +131,7 @@ class GoldenDNALandingPage extends Component{
                     <div className="col-sm-4"  style={{marginTop:5,}}>
                         <MDBIcon icon="play" size="3x" className="amber-text pr-3" />
                         <h4 className="headingAfterLogo"> Digital Content & Video Compilation</h4>
-                        <p> Content is King. And nowhere is this more important than in today’s continuously evolving marketing 
+                        <p style = {{marginBottom : "10.7%"}}> Content is King. And nowhere is this more important than in today’s continuously evolving marketing 
                             landscape. Driven to create stand-out content that truly engages with your audience, our innovative team 
                             of professionals are always on point, on brief and on budget. We specialise in digital content strategy, 
                             graphic design, and multi-language content and video production. Let us assist you to strategically plan, 
@@ -162,7 +162,7 @@ class GoldenDNALandingPage extends Component{
                         <div className="col-sm-4"  style={{marginTop:5,}}>
                             <MDBIcon icon="edit" size="3x" className="amber-text pr-3" />
                             <h4 className="headingAfterLogo"> Video Production & Editing</h4>
-                            <p> 
+                            <p style = {{marginBottom : "2%"}}> 
                             Quality work is always our aim when it comes to video content. Our group of experienced visual creative have major capabilities 
                             when it comes this art we provide our clients with pioneering technology, class-led expertise, unrivalled turnaround times at 
                             a fraction of the cost we. We are here to serve you. From a simple editing job, to a corporate video to an all-out production 

@@ -1,10 +1,10 @@
 import React from 'react';
-//import logo from './logo.svg';
 import './App.css';
-import Landingpage from './landing-page/landing-page'
-import GoldenDNALandingPage from './GoldenDnaPages/GoldenDNALandingPage'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import footer from './footer/footer';
+import Landingpage from './landing-page/landing-page';
+import GoldenDNALandingPage from './GoldenDnaPages/GoldenDNALandingPage';
+import OverheadStudiosLandingPage from './OverheadStudiosPages/OverheadStudiosLandingPage';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
 
 function App() {
   return (
@@ -14,7 +14,9 @@ function App() {
       <Switch>
         <Route path="/" exact component={Landingpage}/>
         <Route path="/golden-dna-home" component={GoldenDNALandingPage}/>
+        <Route path="/overhead-studios" component={OverheadStudiosLandingPage}/>
       </Switch>
+
   </Router>
       
     </div>
